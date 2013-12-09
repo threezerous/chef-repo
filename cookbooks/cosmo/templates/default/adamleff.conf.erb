@@ -1,0 +1,15 @@
+
+<xml>
+     <option1><%= node['cosmo']['OPTION1'] %></option1>
+     <option2><%= node['cosmo']['OPTION2'] %></option2>
+     <option3><%= node['cosmo']['OPTION3'] %></option3>
+     <% if node['cosmo']['is_master'] %>
+     <optionlist>
+     	 <% node['cosmo']['optionslist'].each do |index| %>
+     	 <%= "item.#{index}" %>
+     	 <% end %>
+     </optionlist>
+	<% end %>		     
+</xml>
+	
+mymessage  <%= node['cosmo']['xcosmo'] %>
